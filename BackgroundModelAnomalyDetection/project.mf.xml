@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest>
+    <application name="BackgroundModelAnomalyDetection">
+        <crown name="BackgroundModelAnomaly">
+            <desc>user script</desc>
+        </crown>
+        <meta key="author">Anders Moe</meta>
+        <meta key="version">1.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <entry default="BackgroundModel.lua" path="scripts"/>
+    </application>
+</manifest>
