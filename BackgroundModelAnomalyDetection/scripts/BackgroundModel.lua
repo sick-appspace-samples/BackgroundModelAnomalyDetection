@@ -66,6 +66,10 @@ local function teachBackGroundModel(image)
 
   -- Teach the edge matcher on the first image. This is performed to obtain the background model ROI.
   if edgeMatcherTeached == false then
+    -- Set min downsample factor
+    minDsf,_ = matcher:getDownsampleFactorLimits(image)
+    edgeMatcher:setDownsampleFactor(minDsf)
+    
     teachPose = edgeMatcher:teach(image, teachRegion)
     local edges = edgeMatcher:getModelPoints()
     local edgesPr = Image.PixelRegion.createFromPoints(edges:transform(teachPose), image)
@@ -78,6 +82,10 @@ local function teachBackGroundModel(image)
 
   -- Update background model with this new observation
   if edgeMatcherTeached then
+    -- Set min downsample factor
+    minDsf,_ = matcher:getDownsampleFactorLimits(image)
+    edgeMatcher:setDownsampleFactor(minDsf)
+  
     local poseTransform = edgeMatcher:match(image)
 
     -- Transform image to teach position
