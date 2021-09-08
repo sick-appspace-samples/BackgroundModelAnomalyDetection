@@ -1,23 +1,3 @@
---[[----------------------------------------------------------------------------
-
-  Application Name:
-  BackgroundModel
-                                                                                             
-  Summary:
-  Detecting object appearance deviations. This is done by first teaching
-  how the object should look like on a number of "good" objects, and then
-  detecting pixel regions deviating from the teached model.
-   
-  How to Run:
-  Starting this sample is possible either by running the app (F5) or
-  debugging (F7+F10). Setting breakpoint on the first row inside the 'main'
-  function allows debugging step-by-step after 'Engine.OnStarted' event.
-  Results can be seen in the viewer on the DevicePage.
-  
-  More Information:
-  Tutorial "Algorithms - Filtering and Arithmetic".
-
-------------------------------------------------------------------------------]]
 
 --Start of Global Scope---------------------------------------------------------
 
